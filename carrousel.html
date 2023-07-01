@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Slider de imágenes</title>
+    <style>
+      /* Estilos para el slider */
+      .slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slider__container {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .slider__item {
+        width: 100%;
+        margin-right: 20px;
+      }
+
+      /* Estilos para los controles del slider */
+      .slider__control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .slider__control--left {
+        left: 10px;
+      }
+
+      .slider__control--right {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slider__container">
+        <div class="slider__item">
+          <h2>Imagen 1</h2>
+          <img src="https://picsum.photos/400/300?random=1" alt="Imagen 1">
+        </div>
+        <div class="slider__item">
+          <h2>Imagen 2</h2>
+          <img src="https://picsum.photos/400/300?random=2" alt="Imagen 2">
+        </div>
+        <div class="slider__item">
+          <h2>Imagen 3</h2>
+          <img src="https://picsum.photos/400/300?random=3" alt="Imagen 3">
+        </div>
+      </div>
+      <div class="slider__control slider__control--left" id="prev">&#10094;</div>
+      <div class="slider__control slider__control--right" id="next">&#10095;</div>
+    </div>
+
+    <script>
+      // Seleccionar elementos del DOM
+      const container = document.querySelector('.slider__container');
+      const prevButton = document.querySelector('#prev');
+      const nextButton = document.querySelector('#next');
+
+      // Calcular el ancho de un item
+      const itemWidth = document.querySelector('.slider__item').clientWidth + 20;
+
+      // Agregar evento de clic para el botón de retroceso
+      prevButton.addEventListener('click', () => {
+        container.scrollLeft -= itemWidth;
+      });
+
+      // Agregar evento de clic para el botón de avance
+      nextButton.addEventListener('click', () => {
+        container.scrollLeft += itemWidth;
+      });
+    </script>
+  </body>
+</html>

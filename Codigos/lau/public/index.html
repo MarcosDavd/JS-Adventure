@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #7B1FA2;
+        }
+        
+        h1 {
+            margin-top: 0;
+        }
+
+        td {
+            border-color: black;
+            border-width: 3px;
+            border-style: solid;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+        }
+        
+        table {
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Are you ready ?</h1>
+    <p style="font-size: 30px; margin: 0%;">Enter room name</p>
+    <input type="text" id="nombre"></input>
+        <button id = "crear" style="background-color: #FFC107;">GO</button>
+    <form method="get" action="/lobby">
+        <table>
+            <tr>
+                <td id="pos00"></td>
+                <td id="pos01" style="background-color: #FFEB3B;">P1</td>
+                <td id="pos02"></td>
+                <td id="pos03"></td>
+                <td id="pos04"></td>
+            </tr>
+            <tr>
+                <td id="pos10"></td>
+                <td id="pos11"></td>
+                <td id="pos12"></td>
+                <td id="pos13" style="background-color: #536DFE;">P2</i></td>
+                <td id="pos14"></td>
+            </tr>
+            <tr>
+                <td id="pos20"></td>
+                <td id="pos21"></td>
+                <td id="pos22"></td>
+                <td id="pos23"></td>
+                <td id="pos24"></td>
+            </tr>
+            <tr>
+                <td id="pos30"></td>
+                <td id="pos31"></td>
+                <td id="pos32"></td>
+                <td id="pos33"></td>
+                <td id="pos34"></td>
+            </tr>
+        </table>
+    </form>    
+</body>
+</html>

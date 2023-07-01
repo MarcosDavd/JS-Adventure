@@ -1,0 +1,17 @@
+{
+    "usuarios": [
+      {
+        "nombreUsuario": "johndoe",
+        "contrasena": "contrasena1"
+      },
+      {
+        "nombreUsuario": "janedoe",
+        "contrasena": "contrasena2"
+      },
+      {
+        "nombreUsuario": "alice",
+        "contrasena": "contrasena3"
+      }
+    ]
+  }
+  

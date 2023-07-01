@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      margin-top: 10px;
+      padding: 0;
+      
+   }
+   #boton:hover{
+    background-color: red;
+    transform: scale(1.1);
+  }
+    .personaje{
+
+      width: 150px;
+      height: 120px;
+      background-color: red;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button id="boton">Click</button>
+  <ul>
+    <li>hola</li>
+    <li>hola</li>
+    <li>hola</li>
+    <li>hola</li>
+    <li>hola</li>
+  </ul>
+  <script>
+    var cl=document.getElementById("boton");
+    cl.addEventListener("click", function(){
+      console.log("Entre la funcion");
+      let uls=document.getElementsByTagName("ul");
+      for(let i=0; i< uls.length; i++){
+        uls[i].classList.add("personaje");
+      }
+    });
+  </script>
+</body>
+</html>

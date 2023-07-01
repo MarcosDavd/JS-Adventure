@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 style="text-align: center;">Selccione una imagen</h1>
+    <div>
+        <select id="seleccionado" class="boton">
+            <option value="imagen-1" selected>Imagen 1</option>
+            <option value="imagen-2">Imagen 2</opttion>
+            <option value="imagen-3">Imagen 3</opttion>
+        </select>
+        <input type="button" value="Mostrar" onclick="mostrar()" class="boton">
+        <input type="button" value="Limpiar" onclick="ocultarTodas()" class="boton">
+    </div>    
+    <div>
+        <img id="imagen-1" src="img/imagen-1.jpg" alt="">
+        <img id="imagen-2" src="img/imagen-2.jpg" alt="">
+        <img id="imagen-3" src="img/imagen-3.jpg" alt="">
+    </div>
+    
+</body>
+</html>

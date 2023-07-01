@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color:#FFEB3B;
+        }
+        td {
+            border-color: black;
+            border-width: 3px;
+            border-style: solid;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+        }
+        h1{
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<body onload="roomAnimation()">
+    <h1 style="font-size: 50px">Are you ready ?</h1>
+    <p style="font-size: 30px; margin: 0%;">Enter room name</p>
+    <input type="text" id="nombre"></input>
+        <button id = "crear" style="background-color: #FFC107;">GO</button>
+    <table >
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+        //style="background-color: #536DFE;"
+        //style="background-color: #FFEB3B;"
+        function roomAnimation(){
+            let array= document.querySelectorAll("td");
+            console.log(array.length);
+            
+                for (let i = 0; i < array.length; i++) {                                     
+                    setTimeout(function() {
+                        let p2= document.createElement('p');
+                        let p1= document.createElement('p');
+                        array[i].style.backgroundColor="red";                        
+                        p1.textContent='P1'; 
+                        p2.textContent="P2"
+                        if(i > 3){
+                            array[i-2].style.backgroundColor="green";                       
+                            array[i-2].appendChild(p2);    
+                        }
+                        
+                        array[i].appendChild(p1);
+                        setTimeout(function() {
+                            array[i].removeAttribute("style"); 
+                            array[i].removeChild(p1);       
+                            if(i > 3){                                
+                                array[i-2].removeAttribute("style"); 
+                                array[i-2].removeChild(p2);    
+                            }
+                        }, 1000);
+                        
+                    }, i*1000);
+                    
+            }        
+            
+            
+        }
+        setInterval(roomAnimation, 20000);
+        
+    </script>
+</body>
+</html>
