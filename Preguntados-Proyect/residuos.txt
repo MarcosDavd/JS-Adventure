@@ -1,0 +1,25 @@
+<h1>Preguntados</h1>
+    <div id="buttons">
+        <button id="create">Create Room</button>
+        <button id="join">Join Room</button>
+    </div>
+    <div id="options">
+        <div id="create-room" class="button">
+            <form action="/create-game" method="post">
+                <label for="room-game">Room Name:</label>
+                <input type="text" name="room-name" required>
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div id="join-room" class="sbutton">
+            <form action="/join-game" method="post">
+                <label for="room-ID">Room ID:</label>
+                <input type="text" name="room-ID" required>
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>

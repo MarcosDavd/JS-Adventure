@@ -1,0 +1,40 @@
+.form-game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    display: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#FFEB3B;
+}
+td {
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 20px;
+}
+label{
+    font-family: 'Josefin Sans', sans-serif;
+}
+button{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

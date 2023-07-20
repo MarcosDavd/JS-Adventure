@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home-style.css">
+    
+</head>
+<body onload="roomAnimation()">
+    <h1>Preguntados</h1>
+    <div id="buttons">
+        <button id="create">Create Room</button>
+        <button id="join">Join Room</button>
+    </div>
+    <div id="options">
+        <div id="create-room" class="button">
+            <form action="/create-game" method="post" id="form-create">
+                <label for="room-game">Room Name:</label>
+                <input type="text" name="room-name" required>
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+                <div class="buttons-container">
+                    <button type="submit">Send</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div id="join-room" class="button">
+            <form action="/join-game" method="post" id="form-join">
+                <label for="room-ID">Room ID:</label>
+                <input type="text" name="room-ID" required>
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+                <div class="buttons-container">
+                    <button type="submit">Send</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <table style="margin-top: 15px;">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script src="js/home.js"></script>
+</body>
+</html>

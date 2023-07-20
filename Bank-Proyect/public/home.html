@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">
+        
+    </h1>
+    <script>
+        let title = document.getElementById('title');
+        let hours = new Date().getHours();
+        
+        let night = [20,21,22,23,0,1,2,3,4,5];
+        let afternoon = [13,14,15,16,17,18,19];
+        
+        if(afternoon.includes(hours)){
+            title.textContent='Bienvenido Buenas Tardes !!';
+        }else{
+            if(night.includes(hours)){
+                title.textContent='Bienvenido Buenas Noches !!'
+            }else{
+                title.textContent='Bienvenido Buenos Dias !!'
+            }
+        }
+    </script>
+</body>
+</html>

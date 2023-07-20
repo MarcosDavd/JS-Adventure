@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-game{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+       }
+       #create-room{
+        display: none;
+       }
+    </style>
+</head>
+<body>
+    <div id="create-room" >
+        <form action="/create-game" method="post" class="form-game">
+            <label for="room-game">Room Name:</label>
+            <input type="text" name="room-name" required>
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <div id="game">
+        <button id="start-game">Start</button>
+    </div>
+    <script>
+        const button = document.getElementById("start-game");
+        button.addEventListener("click",function(){
+           
+            let namePlayer = "David";
+           
+            let container = document.getElementById("game");
+           
+            let name = document.createElement("p");
+           
+            name.textContent = namePlayer;
+            container.appendChild(name);
+        });
+    </script>
+</body>
+</html>
